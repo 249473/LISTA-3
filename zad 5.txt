@@ -1,0 +1,21 @@
+#!/bin/bash
+trap "echo SIGINT" INT
+trap "echo SIGhup" HUP
+trap "echo SIGquit" QUIT
+trap "echo SIGill" ILL
+trap "echo SIGTRAP" TRAP
+trap "echo SIGARBT" ARBT
+trap "echo SIBUST" BUS
+trap "echo SIGFPE" FPE
+trap "echo SIGKILL" KILL
+trap "echo SIGUSR1" USR1
+trap "echo SIGSEGV" SEGV
+trap "echo SIGUSR2" USR2
+trap "echo SIGPIPE" PIPE
+trap "echo SIGALRM" ALRM
+trap "echo SIGTERM" TERM 
+while :
+do
+date
+sleep 2
+done

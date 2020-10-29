@@ -1,0 +1,15 @@
+(zad 1-3) rozwi¹zane s³ownie
+za pomoc¹ komendy mknod FIFO p stworzono potok typu fifo o nazwie FIFO 
+nastêpnie na dwoch terminalach otworzono odczyt tego pliku a naa dwoch zapis
+kiedy w dowolnym oknie z zapisem bylo cos wpisywane do pliku odczyty wyswietla³y to na zmiane
+np 
+pisz¹c 
+1
+0
+1
+0
+1
+0
+jedno okno wyswietli³o by same 0 a drugie same 1
+gdy jeden z odczytów zosta³ zamkniêty wszystko wypisywa³o siê do drugiego
+zamykanie procesu zapisu nic nie zmienia³o.
