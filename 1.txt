@@ -1,0 +1,22 @@
+/*zosta³ napisany program w c który zawiera³ pêtle wykonuj¹c¹ 
+siê w nieskoñczonoœæ. po uruchomieniu jej w konsoli 
+w nastêpnej konsoli zostala wpisana komenda top gdzie wyraznie
+ bylo widac ze program w c jest na samej górze co oznacza ¿e jest 
+na ten moment najbardziej zasobo¿erne.
+po dodaniu krótkiego uœpienia co ka¿dy obrót pêtli program znikn¹³ ze szczytu listy top.*/
+
+#include <stdio.h>
+#include <time.h>
+int main()
+{
+int i=0;
+    int ms=100;
+    struct timespec req;
+    req.tv_sec=0;
+    req.tv_nsec=ms*1000000L;
+    while (1)
+    {
+        i++;
+        nanosleep(&req,(struct timespec *)NULL);
+    }
+}

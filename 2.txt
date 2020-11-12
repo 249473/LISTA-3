@@ -1,0 +1,48 @@
+/*
+program przechwytuje sygnaly zaa pomoc¹ kill -s x abcde gdzie x to numer sygnalu a abcde to index dzia³aj¹cego programu
+program poprawnie interpretuje sygna³y
+*/
+
+#include <stdio.h>
+#include <time.h>
+#include <signal.h>
+void sygnum(int signum)
+{
+    printf("sygnal zlapany o numerze %d\n", signum);
+    exit(0);
+}
+void sygnum1(int signum)
+{
+    printf("sygnal zlapany o numerze %d\n", signum);
+}
+void sygnum2(int signum)
+{
+    //printf("sygnal zlapany o numerze %d\n", signum);
+    //exit(0);
+}
+void sygnum3(int signum)
+{
+    ;
+    //printf("sygnal zlapany o numerze %d\n", signum);
+    //exit(0);
+}
+int main()
+{
+    int i=0;
+
+    int ms=100;
+
+    struct timespec req;
+    req.tv_sec=0;
+    req.tv_nsec=ms*1000000L;
+    signal(SIGUSR1, sygnum);
+    signal(SIGUSR2, sygnum1);
+  //signal(SIGUSR1, sygnum2);
+    signal(SIGALRM, sygnum3);
+    while (1)
+    {
+        i++;
+        nanosleep(&req,(struct timespec *)NULL);
+    }
+    return 0;
+}
