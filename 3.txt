@@ -1,0 +1,9 @@
+Sporo narzedzi proc znajduje siê w folderze /proc. Mamy 
+mo¿liwoœæ ich odczytu przy pomocy zwyklych narzêdzi do
+ operacji na plikach tekstowych, jak np cat. Niektore z
+ wyswietlonych plioków s¹ nieczytelne dla cz³owieka. 
+Nalezy sie zalogowac na roota.
+Dostepne sa narzedzia ogolne, jak i dla poszczegolnych
+ procesow. W katalogu /proc znajduja sie 
+katalogi o numerach nazwach bedacymi numerami PID odpowiadajacym 
+ich procesom. A zatem, czesc narzedzi znajduje sie w katalogach /proc/$PID.

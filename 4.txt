@@ -1,0 +1,10 @@
+w zadaniu 4 odpalono program z zad 1 i 2 w potoku 
+./a.out | cut -b 1-3 | cat> plik.txt 
+nastêpnie zosta³o sprawdzoe id procesu a.out
+i w kolejnej konsoli w folderze proc przeszliœmy do fd gdzie widaæ 
+za pomoc¹ ls -l ¿e ma tylko wyjœcie bo jest dziadkiem
+potem sprawdzono kolejne ip o numer wiêksze gdzie widaæ
+ze cut jest ojcem bo ma wejscie od dziadka i wyjscie dla syna
+nastepnie znowu w proc weszlismy do procesu o kolejnym indexie 
+gdzie w fd za pomoc¹ ls -s widzieliœmy ze proces jest synem 
+bo ma tylko wejœcie od ojca
