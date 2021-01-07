@@ -1,0 +1,26 @@
+#include <pthread.h>
+#include <stdio.h>
+#include <stdlib.h>
+#define ilosc_watkow 10
+
+void *pokaz(void *id)
+{
+	long idw= (long)id;
+	printf("slowo watku &ld\n", idw);
+	pthead_exit(null);
+}
+
+int main()
+{
+pthread_t watki[ilosc_watkow];
+for(long t=0; t<ilosc_watkow;t++)
+	{
+		printf("tworzenie watku nr %ld\n",t);
+		if (pthread_create(&watki[t],NULL,pokaz,(void *)t))
+		{
+			printf("blad"\n);
+			exit(-1);
+		}
+	}
+pthread_exit(NULL);
+}
